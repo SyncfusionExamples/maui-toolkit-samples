@@ -20,8 +20,6 @@
         <carousel:SfCarousel x:Name="carousel"  
                              ItemTemplate="{StaticResource itemTemplate}" 
                              ItemsSource="{Binding ImageCollection}" 
-                             HeightRequest="400" 
-                             WidthRequest="800" 
                              ViewMode="Linear"
                              AllowLoadMore="True"
                              LoadMoreItemsCount="2"/>
