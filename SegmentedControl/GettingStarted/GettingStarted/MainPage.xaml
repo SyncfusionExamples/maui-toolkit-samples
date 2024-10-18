@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:segmentedControl="clr-namespace:Syncfusion.Maui.Toolkit.SegmentedControl;assembly=Syncfusion.Maui.Toolkit"
+             x:Class="GettingStarted.MainPage">
+
+    <segmentedControl:SfSegmentedControl x:Name="segmentedControl">
+        <segmentedControl:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </segmentedControl:SfSegmentedControl.ItemsSource>
+    </segmentedControl:SfSegmentedControl>
+
+</ContentPage>
