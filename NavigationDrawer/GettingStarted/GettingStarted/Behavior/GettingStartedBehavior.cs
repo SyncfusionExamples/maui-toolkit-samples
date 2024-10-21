@@ -39,26 +39,10 @@
         protected override void OnAttachedTo(ContentPage bindable)
         {
             base.OnAttachedTo(bindable);
-            bindable.Appearing += Bindable_Appearing;
-        }
-
-        /// <summary>
-        /// Handles the appearing event of the content page.
-        /// </summary>
-        /// <param name="sender">The event sender.</param>
-        /// <param name="e">The event arguments.</param>
-        private void Bindable_Appearing(object? sender, EventArgs e)
-        {
-            var page = sender as ContentPage;
-            if (page == null)
-            {
-                return;
-            }
-
-            this.navigationDrawer = page.Content.FindByName<SfNavigationDrawer>("navigationDrawer");
-            this.imageButton = page.Content.FindByName<ImageButton>("hamburgerButton");
-            this.listView = page.Content.FindByName<ListView>("listView");
-            this.contentLabel = page.Content.FindByName<Label>("contentLabel");
+            this.navigationDrawer = bindable.FindByName<SfNavigationDrawer>("navigationDrawer");
+            this.imageButton = bindable.FindByName<ImageButton>("hamburgerButton");
+            this.listView = bindable.FindByName<ListView>("listView");
+            this.contentLabel = bindable.FindByName<Label>("contentLabel");
             if (this.imageButton != null)
             {
                 this.imageButton.Clicked += ImageButton_Clicked;
