@@ -16,7 +16,7 @@
         </chart:SfPyramidChart.Title>
 
         <chart:SfPyramidChart.BindingContext>
-            <model:ChartViewModel/>
+            <model:StageViewModel/>
         </chart:SfPyramidChart.BindingContext>
 
         <chart:SfPyramidChart.Legend>
