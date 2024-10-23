@@ -6,7 +6,7 @@
              x:Class="GettingStarted.MainPage">
 
     <ContentPage.BindingContext>
-        <model:ViewModel/>
+        <model:PersonViewModel  />
     </ContentPage.BindingContext>
 
     <chart:SfCartesianChart>
