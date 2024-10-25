@@ -1,6 +1,6 @@
 ﻿namespace GettingStarted
 {
-    public class Admission
+    public class AdmissionModel
     {
         public string? XValue { get; set; }
         public double YValue { get; set; }
