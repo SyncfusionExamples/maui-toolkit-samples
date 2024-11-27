@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:bottomSheet="clr-namespace:Syncfusion.Maui.Toolkit.BottomSheet;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:local="clr-namespace:GettingStarted"
+             x:Class="GettingStarted.MainPage">
+
+    <ContentPage.Behaviors>
+        <local:GettingStartedBehavior/>
+    </ContentPage.Behaviors>
+
+    <Grid>
+        <VerticalStackLayout Padding="20">
+            <Button x:Name="openBottomSheet" Text="Open Bottom Sheet" WidthRequest="180" CornerRadius="30" VerticalOptions="Center"/>
+        </VerticalStackLayout>
+        <bottomSheet:SfBottomSheet x:Name="bottomSheet">
+            <bottomSheet:SfBottomSheet.BottomSheetContent>
+                <Label Text="Bottom Sheet Content" VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" />
+            </bottomSheet:SfBottomSheet.BottomSheetContent>
+        </bottomSheet:SfBottomSheet>
+    </Grid>
+
+</ContentPage>
