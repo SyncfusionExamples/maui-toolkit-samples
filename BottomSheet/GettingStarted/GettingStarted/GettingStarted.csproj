@@ -63,8 +63,4 @@
 		<PackageReference Include="Syncfusion.Maui.Toolkit" Version="*" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\..\..\..\..\Task\toolkit\development\maui-toolkit\maui\src\Syncfusion.Maui.Toolkit.csproj" />
-	</ItemGroup>
-
 </Project>
