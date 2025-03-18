@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:otpInput="clr-namespace:Syncfusion.Maui.Toolkit.OtpInput;assembly=Syncfusion.Maui.Toolkit"
+             x:Class="GettingStarted.MainPage">
+    
+    <VerticalStackLayout Spacing="20" VerticalOptions="Center" HorizontalOptions="Center">
+        <Grid RowDefinitions="*,*" >
+            <Label Text="Default (Number) OTP Input" FontAttributes="Bold" FontSize="16"/>
+            <otpInput:SfOtpInput  Grid.Row="1"
+                              Value="7359"
+                              Type="Number"/>
+        </Grid>
+        <Grid RowDefinitions="*,*" >
+            <Label Text="Text OTP Input" FontAttributes="Bold" FontSize="16" />
+            <otpInput:SfOtpInput  Grid.Row="1"
+                              Type="Text"
+                              Value="e3c7"/>
+        </Grid>
+        <Grid RowDefinitions="*,*" >
+            <Label Text="Password OTP Input" FontAttributes="Bold" FontSize="16" />
+            <otpInput:SfOtpInput  Grid.Row="1"
+                              Value="7359"
+                              Type="Password" />
+        </Grid>
+
+    </VerticalStackLayout>
+
+</ContentPage>
