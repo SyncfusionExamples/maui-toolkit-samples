@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sunburst="clr-namespace:Syncfusion.Maui.Toolkit.SunburstChart;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:model="clr-namespace:GettingStarted"
+             x:Class="GettingStarted.MainPage">
+
+    <ContentPage.BindingContext>
+        <model:SunburstViewModel/>
+    </ContentPage.BindingContext>
+
+    <sunburst:SfSunburstChart  EnableAnimation="True" InnerRadius="0.2" EnableTooltip="True" ShowLabels="True"
+                               x:Name="sunburstChart" ItemsSource="{Binding DataSource}"
+                               ValueMemberPath="EmployeesCount" >
+
+        <sunburst:SfSunburstChart.BindingContext>
+            <model:SunburstViewModel/>
+        </sunburst:SfSunburstChart.BindingContext>
+
+        <sunburst:SfSunburstChart.Title>
+            <Label Text="EmployeesCount" Margin="0,20,0,0" HorizontalOptions="Center" VerticalOptions="Center" FontSize="18"
+                   FontAttributes="Bold" TextColor="Black" />
+        </sunburst:SfSunburstChart.Title>
+
+        <sunburst:SfSunburstChart.Legend>
+            <sunburst:SunburstLegend  />
+        </sunburst:SfSunburstChart.Legend>
+
+        <sunburst:SfSunburstChart.Levels>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobDescription"/>
+            <sunburst:SunburstHierarchicalLevel GroupMemberPath="JobGroup"/>
+        </sunburst:SfSunburstChart.Levels>
+
+    </sunburst:SfSunburstChart>
+
+</ContentPage>
