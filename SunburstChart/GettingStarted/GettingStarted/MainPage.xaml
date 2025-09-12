@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sunburst="clr-namespace:Syncfusion.Maui.Toolkit.SunburstChart;assembly=Syncfusion.Maui.SunburstChart.Toolkit"
+             xmlns:sunburst="clr-namespace:Syncfusion.Maui.Toolkit.SunburstChart;assembly=Syncfusion.Maui.Toolkit"
              xmlns:model="clr-namespace:GettingStarted"
              x:Class="GettingStarted.MainPage">
 
@@ -11,7 +11,7 @@
 
     <sunburst:SfSunburstChart  EnableAnimation="True" InnerRadius="0.2" EnableTooltip="True" ShowLabels="True"
                                x:Name="sunburstChart" ItemsSource="{Binding DataSource}"
-                   ValueMemberPath="EmployeesCount" >
+                               ValueMemberPath="EmployeesCount" >
 
         <sunburst:SfSunburstChart.BindingContext>
             <model:SunburstViewModel/>
