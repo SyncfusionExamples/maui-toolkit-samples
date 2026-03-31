@@ -9,8 +9,8 @@ namespace GettingStarted
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .ConfigureSyncfusionToolkit()
                 .UseMauiApp<App>()
+                .ConfigureSyncfusionToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
