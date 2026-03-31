@@ -1,4 +1,6 @@
-﻿namespace GettingStarted
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace GettingStarted
 {
     public partial class App : Application
     {
