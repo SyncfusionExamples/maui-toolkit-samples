@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Toolkit.Carousel;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:local="clr-namespace:LoadMoreSample"
+             x:Class="LoadMoreSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:GalleryViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="itemTemplate">
+                <Image Source="{Binding ImageName}" 
+                       Aspect="AspectFit"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <carousel:SfCarousel x:Name="carousel"  
+                             ItemTemplate="{StaticResource itemTemplate}" 
+                             ItemsSource="{Binding ImageCollection}" 
+                             ViewMode="Linear"
+                             AllowLoadMore="True"
+                             LoadMoreItemsCount="2"/>
+    </ContentPage.Content>
+
+</ContentPage>
